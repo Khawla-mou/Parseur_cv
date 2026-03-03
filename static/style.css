@@ -1,0 +1,77 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card Container */
+.container {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+/* Form */
+form {
+    margin-top: 20px;
+}
+
+/* File Input */
+input[type="file"] {
+    margin: 15px 0;
+    padding: 10px;
+}
+
+/* Button */
+button {
+    background: #1e3c72;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2a5298;
+}
+
+/* Results Section */
+.results {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.results h2 {
+    margin-top: 15px;
+    color: #2a5298;
+}
+
+.results p {
+    background: #f4f4f4;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
