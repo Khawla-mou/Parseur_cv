@@ -44,15 +44,24 @@ Le cœur de l'application est un pipeline de traitement modulaire. Chaque étape
 
 Ce diagramme illustre les interactions entre les modules logiques lors de l'analyse d'un CV.
 
-graph TD
+graph 
+
     A[Navigateur Client] -->|HTTPS| B(Traefik - Reverse Proxy);
+    
     B --> C{Flask App Container};
+    
     C --> D[Flask-Login (Auth)];
+    
     C --> E[File Upload Handler];
+    
     E --> F[Text Extraction Engine];
+    
     F --> G[NLP Processing Engine];
+    
     G --> H[Data Structuring & DB];
+    
     C --> I[Jinja2 Templates];
+    
     H --> I;
 
 ## 3. Modélisation des Données et Processus
