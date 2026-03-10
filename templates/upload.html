@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload des CV - Système CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Système de Parsing de CV</h1>
+        <p style="text-align: center;"><a href="{{ url_for('logout') }}">Se déconnecter</a></p>
+
+        <div class="form-card">
+            <form action="{{ url_for('analyze') }}" method="post" enctype="multipart/form-data">
+                <h2>Importer les CV</h2>
+                <label for="cv_files">Choisissez les fichiers (PDF, DOCX)</label>
+                <input type="file" id="cv_files" name="files" multiple accept=".pdf,.docx" required>
+                <button type="submit" class="btn-primary">Analyser les CVs</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - Système CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Connexion</h1>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+        <div class="form-card">
+            <form method="post">
+                <label for="username">Identifiant</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn-primary">Se connecter</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

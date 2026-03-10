@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    # Construit l'image à partir du Dockerfile du répertoire courant
+    build: .
+    # Nom du conteneur pour plus de clarté
+    container_name: mon-app-flask
+    # Mappe le port 5000 de votre machine au port 5000 du conteneur
+    ports:
+      - "5000:5000"
+    # Monte le répertoire courant dans /app du conteneur.
+    # C'est la magie pour le développement : vos modifications de code
+    # sont répercutées EN TEMPS RÉEL dans le conteneur grâce au mode debug !
+    volumes:
+      - .:/app
+    # S'assure que le conteneur redémarre si il s'arrête de manière inattendue
+    restart: unless-stopped
