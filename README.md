@@ -44,7 +44,6 @@ Le cœur de l'application est un pipeline de traitement modulaire. Chaque étape
 
 Ce diagramme illustre les interactions entre les modules logiques lors de l'analyse d'un CV.
 
-```mermaid
 graph TD
     A[Navigateur Client] -->|HTTPS| B(Traefik - Reverse Proxy);
     B --> C{Flask App Container};
@@ -55,7 +54,6 @@ graph TD
     G --> H[Data Structuring & DB];
     C --> I[Jinja2 Templates];
     H --> I;
-```
 
 ## 3. Modélisation des Données et Processus
 
